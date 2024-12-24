@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+
+:root{
+    /* colors */
+    --sedans-background-color: hsl(31, 77%, 52%);
+    --suvs-background-color: hsl(184, 100%, 22%);
+    --luxury-background-color: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --bg-headings-buttons-color:hsl(0, 0%, 95%);
+    
+    /* fonts */
+    --font-size-body: 15px;
+    --font-family-body: 'Lexend Deca', sans-serif;
+    --font-family-headings: 'Big Shoulders Display', sans-serif;
+    --font-weight-body: 400;
+    --font-weight-headings: 700;
+}
+
+
+/* resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* general styles */
+
+body{
+    min-height: 100dvh;
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    background-color: var(--bg-headings-buttons-color);
+    /* padding: 1rem 1rem; */
+
+    display: grid;
+    place-content: center;
+}
+/* utility classes */
+.sedans{
+    background-color: var(--sedans-background-color);
+}
+
+.sedans input{
+    color: var(--sedans-background-color);
+}
+
+.sedans input:active{
+    background-color: var(--sedans-background-color);
+    border: 2px solid var(--paragraph-color);
+    color: var(--paragraph-color);
+}
+
+.suvs{
+    background-color: var(--suvs-background-color);
+}
+.suvs input{
+    color: var(--suvs-background-color);
+}
+.suvs input:active{
+    color: var(--paragraph-color);
+    border: 2px solid var(--paragraph-color);
+    background-color: var(--suvs-background-color);
+}
+
+.luxury{
+    background-color: var(--luxury-background-color);
+}
+.luxury input{
+    color: var(--luxury-background-color);
+}
+.luxury input:active{
+    border: 2px solid var(--paragraph-color);
+    background-color: var(--luxury-background-color);
+    color: var(--paragraph-color);
+}
+
+
+.cars{
+    margin-bottom: 2.5rem;
+}
+/* end of utility classes */
+
+.column-preview-card{
+    max-width: 370px;
+    margin: 5rem 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+
+.preview-card{
+    padding: 3rem 2rem;
+    overflow: hidden;
+    margin-inline: auto;
+}
+
+.preview-card h1{
+    text-transform: uppercase;
+    color: var(--bg-headings-buttons-color);
+    font-family: var(--font-family-headings);
+    font-weight: var(--font-weight-headings);
+    margin: 1.5rem 0;
+}
+
+.preview-card .desc{
+    color: var(--paragraph-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+
+.preview-card input{
+    width: 55%;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: var(--font-family-headings);
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+
+/* footer styles */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* end of footer styles */
+
+
+/* media queries */
+
+@media screen and (min-width: 800px) {
+    .column-preview-card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+}
